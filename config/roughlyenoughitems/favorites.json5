@@ -66,14 +66,17 @@
 		"{data:{Count:1b,id:\"minecraft:tnt\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:bone_meal\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"botania:terra_plate\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-		"{data:{Count:1b,id:\"minecraft:magma_cream\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}"
+		"{data:{Count:1b,id:\"minecraft:magma_cream\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
+		"{data:{Count:1b,id:\"botania:ender_air_bottle\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
+		"{data:{Amount:1000,FluidName:\"create:potion\",Tag:{Potion:\"minecraft:awkward\"},type:\"minecraft:fluid\"},type:\"roughlyenoughitems:entry_stack\"}",
+		"{data:{Count:1b,id:\"create:brass_ingot\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
+		"{data:{Count:1b,id:\"minecraft:white_carpet\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
+		"{data:{Count:1b,id:\"botania:terrasteel_ingot\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}"
 	],
 	"hiddenFavorites": [],
 	"displays": [
 		"{DisplayHistoryCategory:\"kubejs:fire_entity\",DisplayHistoryContains:0b,DisplayHistoryUUID:\"af03ab33-e697-4bea-96c8-b27e7465da43\"}",
 		"{DisplayHistoryCategory:\"kubejs:bartering\",DisplayHistoryContains:0b,DisplayHistoryUUID:\"ed985fc9-388e-4766-a69a-50cf8e047ed7\"}",
-		"{DisplayHistoryCategory:\"lychee:block_crushing/minecraft/default\",DisplayHistoryContains:0b,DisplayHistoryUUID:\"74fb38e4-3afc-42b8-bf64-dce75cd23058\"}",
-		"{DisplayHistoryCategory:\"create:sequenced_assembly\",DisplayHistoryContains:1b,DisplayHistoryData:{JEISerializer:\"create:sequenced_assembly\",data:\"AQGjCwEABQ5jcmVhdGU6Y3V0dGluZy1wbGF5aW5nd2l0aGZpcmU6c2VxdWVuY2VkX2Fzc2VtYmx5L2ljZV9zdGVwXzABAgHGEQEAAaMLAQAAAQHGEQEAP4AAAABkAA5jcmVhdGU6ZmlsbGluZy1wbGF5aW5nd2l0aGZpcmU6c2VxdWVuY2VkX2Fzc2VtYmx5L2ljZV9zdGVwXzEBAQHGEQEAAQD0Aw9taW5lY3JhZnQ6Zmx1aWQRCgAAAAEBxhEBAD+AAAAAAAAQY3JlYXRlOmRlcGxveWluZy1wbGF5aW5nd2l0aGZpcmU6c2VxdWVuY2VkX2Fzc2VtYmx5L2ljZV9zdGVwXzICAQHGEQEAAQGlAQEAAAEBxhEBAD+AAAAAAAAAEGNyZWF0ZTpkZXBsb3lpbmctcGxheWluZ3dpdGhmaXJlOnNlcXVlbmNlZF9hc3NlbWJseS9pY2Vfc3RlcF8zAgEBxhEBAAEB6Q4BAAABAcYRAQA/gAAAAAAAAA9jcmVhdGU6cHJlc3NpbmctcGxheWluZ3dpdGhmaXJlOnNlcXVlbmNlZF9hc3NlbWJseS9pY2Vfc3RlcF80AQEBxhEBAAABAcYRAQA/gAAAAAAAAQGcAgEAP4AAAAHGEQEAP4AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\",id:\"playingwithfire:sequenced_assembly/ice\"},DisplayHistoryUUID:\"9de6882e-c462-4ea8-acf2-38bc1d00af76\"}",
-		"{DisplayHistoryCategory:\"minecraft:plugins/crafting\",DisplayHistoryContains:1b,DisplayHistoryData:{REIRecipeType:\"Shaped\",RecipeHeight:3,RecipeWidth:3,input:[[],[{Count:1b,id:\"botania:pixie_dust\",type:\"minecraft:item\"}],[{Count:1b,id:\"botania:dragonstone\",type:\"minecraft:item\"}],[],[{Count:1b,id:\"botania:elementium_ingot\",type:\"minecraft:item\"}],[{Count:1b,id:\"botania:pixie_dust\",type:\"minecraft:item\"}],[{Count:1b,id:\"botania:elementium_ingot\",type:\"minecraft:item\"}]],location:\"botania:rainbow_rod\",output:[[{Count:1b,id:\"botania:rainbow_rod\",type:\"minecraft:item\"}]]},DisplayHistoryUUID:\"4b716680-2ff1-48d8-9569-6e1016461f2d\"}"
+		"{DisplayHistoryCategory:\"lychee:block_crushing/minecraft/default\",DisplayHistoryContains:0b,DisplayHistoryUUID:\"74fb38e4-3afc-42b8-bf64-dce75cd23058\"}"
 	]
 }

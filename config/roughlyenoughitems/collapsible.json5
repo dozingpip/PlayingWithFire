@@ -2813,6 +2813,53 @@
 				"{Count:1b,id:\"botania:enchanter\",type:\"minecraft:item\"}",
 				"{Count:1b,id:\"botania:cacophonium_block\",type:\"minecraft:item\"}"
 			]
+		},
+		{
+			"id": "custom:d8d44651-d46c-45da-abaa-e48e499e2c09",
+			"name": "postbox",
+			"stacks": [
+				"{Count:1b,id:\"create:white_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:orange_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:magenta_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:light_blue_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:yellow_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:lime_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:pink_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:gray_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:light_gray_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:cyan_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:purple_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:blue_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:brown_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:green_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:red_postbox\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:black_postbox\",type:\"minecraft:item\"}"
+			]
+		},
+		{
+			"id": "custom:7ba61252-9f14-472c-a173-4a62dc5a9aba",
+			"name": "table cover",
+			"stacks": [
+				"{Count:1b,id:\"create:white_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:orange_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:magenta_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:light_blue_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:yellow_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:lime_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:pink_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:gray_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:light_gray_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:cyan_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:purple_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:blue_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:brown_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:green_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:red_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:black_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:andesite_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:brass_table_cloth\",type:\"minecraft:item\"}",
+				"{Count:1b,id:\"create:copper_table_cloth\",type:\"minecraft:item\"}"
+			]
 		}
 	]
 }
