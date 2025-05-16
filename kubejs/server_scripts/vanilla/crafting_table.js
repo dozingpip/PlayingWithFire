@@ -107,4 +107,15 @@ ServerEvents.recipes(event => {
             D: 'minecraft:dispenser'
         }
     ).id("playingwithfire:spreader_turntable")
+    event.shaped('minecraft:netherite_pickaxe',
+        [
+            'NNN',
+            ' S ',
+            ' S '
+        ],
+        {
+            N: 'minecraft:netherite_ingot',
+            S: 'minecraft:end_rod'
+        }
+    ).id("playingwithfire:netherite_pick")
 })
