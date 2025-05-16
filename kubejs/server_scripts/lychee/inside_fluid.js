@@ -24,6 +24,22 @@ ServerEvents.recipes(event => {
     }).id("playingwithfire:fluid_dip/more_sugar_cane");
     event.custom({
         type: "lychee:item_inside",
+        item_in: {
+            tag: "minecraft:leaves"
+        },
+        block_in: {
+            blocks: ["funkyfluids:redstone_suspension_block"]
+        },
+        post: [
+            {
+                type: "drop_item",
+                item: "botania:redstone_root",
+                count: 1
+            }
+        ]
+    }).id("playingwithfire:fluid_dip/redstone_root");
+    event.custom({
+        type: "lychee:item_inside",
         hide_in_viewer: true,
         item_in: {
             item: "botania:cyan_shiny_flower"

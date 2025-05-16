@@ -106,9 +106,9 @@ BlockEvents.rightClicked(event => {
         player.giveInHand('minecraft:twisting_vines')
         level.setBlock(block.pos, Block.getBlock('minecraft:flower_pot').withPropertiesOf(block.blockState), 3)
     }
-    else if(block.id == 'create:blaze_burner' && event.hand == 'main_hand' && item.empty)
+    else if(block.id == 'create:blaze_burner' && event.hand == 'main_hand')
     {
-        let cost = 20
+        let cost = 10
         let limit = 0
         let min = 0
         let state = block.getProperties().blaze
@@ -118,11 +118,11 @@ BlockEvents.rightClicked(event => {
         else if(state == "kindled")
         {
             min = 1
-            limit = 3
+            limit = 5
         }
         else if(state == "seething")
         {
-            limit = 4
+            limit = 9
             min = 4
         }
         if(burnTimeRemaining - (cost*range) <= 0)

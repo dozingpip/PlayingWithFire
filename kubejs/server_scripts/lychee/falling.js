@@ -55,8 +55,8 @@ ServerEvents.recipes(event => {
     // event.custom(falling("botania:pure_daisy", "turtle_egg", "moss_block"))
     // event.custom(falling("botania:pure_daisy", "cake", "moss_block"))
     // event.custom(fallingOn(falling("botania:pure_daisy", "flower_pot", "moss_block"), "pointed_dripstone"))
-    event.custom(falling("create:zinc_block", "kubejs:potted_twisting_vines"))
-    event.custom(falling("minecraft:copper_block", "minecraft:potted_crimson_fungus"))
+    event.custom(falling("create:zinc_block", "kubejs:potted_twisting_vines")).id("playingwithfire:falling/zinc_block")
+    event.custom(falling("minecraft:copper_block", "minecraft:potted_crimson_fungus")).id("playingwithfire:falling/copper_block")
     event.custom(
     {
         "type": "lychee:block_crushing",
@@ -72,7 +72,7 @@ ServerEvents.recipes(event => {
                 "block": "nether_gold_ore"
             }
         ]
-    })
+    }).id("playingwithfire:falling/nether_gold_ore")
     event.custom(
         {
             "type": "lychee:block_crushing",
@@ -88,7 +88,7 @@ ServerEvents.recipes(event => {
                     "block": "gilded_blackstone"
                 }
             ]
-        })
+        }).id("playingwithfire:falling/gilded_blackstone")
         event.custom(
             {
                 "type": "lychee:block_crushing",
@@ -104,7 +104,7 @@ ServerEvents.recipes(event => {
                         "block": "crying_obsidian"
                     }
                 ]
-            })
+            }).id("playingwithfire:falling/crying_obsidian")
     event.custom(
     {
         "type": "lychee:block_crushing",
@@ -116,7 +116,7 @@ ServerEvents.recipes(event => {
                 "block": "botania:pure_daisy"
             }
         ]
-    })
+    }).id("playingwithfire:falling/pure_daisy")
     event.custom(
     {
         "type": "lychee:block_crushing",
@@ -133,27 +133,27 @@ ServerEvents.recipes(event => {
                 "block": "minecraft:pointed_dripstone"
             }
         ]
-    })
+    }).id("playingwithfire:falling/dripleaf_to_dripstone")
     event.custom(
+    {
+        "type": "lychee:block_crushing",
+        "falling_block": "gravel",
+        "item_in": [
         {
-            "type": "lychee:block_crushing",
-            "falling_block": "gravel",
-            "item_in": [
+            "item": "kubejs:bomb",
+        }
+        ],
+        "post": [
             {
-                "item": "kubejs:bomb",
+                "type": "drop_item",
+                "item": "potion",
+                "nbt": {
+                    "Potion": "minecraft:awkward"
+                },
+                "count":2
             }
-            ],
-            "post": [
-                {
-                    "type": "drop_item",
-                    "item": "potion",
-                    "nbt": {
-                        "Potion": "minecraft:awkward"
-                    },
-                    "count":2
-                }
-            ]
-        })
+        ]
+    }).id("playingwithfire:falling/bomb_to_awkward")
     event.custom(
     {
         "type": "lychee:block_crushing",
@@ -169,5 +169,21 @@ ServerEvents.recipes(event => {
                 "block": "ender_chest"
             }
         ]
-    })
+    }).id("playingwithfire:falling/shadow_steel_ender_chest")
+    event.custom(
+    {
+        "type": "lychee:block_crushing",
+        "landing_block": "minecraft:sculk",
+        "post": [
+            {
+                "type": "place",
+                "block": "*"
+            },
+            {
+                "type": "drop_item",
+                "item": "minecraft:sculk",
+                "count": 1
+            },
+        ]
+    }).id("playingwithfire:falling/sculk")
 })

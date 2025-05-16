@@ -1,0 +1,11 @@
+{
+    "type": "block_transform",
+    "flowing": "#funkyfluids:oobleck",
+    "blocks_nearby": [
+    ],
+    "block_to_transform": "minecraft:red_sand",
+    "result": {
+        "type": "blocks",
+        "blocks": "minecraft:sand"
+    }
+}

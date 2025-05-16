@@ -1,0 +1,11 @@
+{
+    "type": "block_transform",
+    "flowing": "#funkyfluids:magnetroleum",
+    "blocks_nearby": [
+    ],
+    "block_to_transform": "minecraft:netherrack",
+    "result": {
+        "type": "blocks",
+        "blocks": "minecraft:nether_bricks"
+    }
+}

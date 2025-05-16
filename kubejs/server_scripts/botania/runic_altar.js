@@ -58,4 +58,5 @@ ServerEvents.recipes(event => {
             mana: 1000
         }).id("playingwithfire:runic_altar/copy_" + (disc.item.substring(disc.item.lastIndexOf(":")+1)))
     })
+    altarEnchantedBook("minecraft:silk_touch", 1, 5000, [{item: "minecraft:ghast_tear"}, {item: "minecraft:amethyst_shard"}, {item: "minecraft:book"}, {item: "botania:rune_air"}])
 });

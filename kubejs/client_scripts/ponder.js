@@ -96,10 +96,10 @@ Ponder.registry((event) => {
         scene.world.modifyBlockEntityNBT([2, 1, 2], (nbt) => {
             nbt.machineID = "playingwithfire:teatable"
         });
-        scene.particles
-        .fluid(20, "create:tea", [2, 1.5, 2])
-        .delta([0.3, 0.3, 0.3])
-        .density(2);
+        // scene.particles
+        // .fluid(20, "create:tea", [2, 1.5, 2])
+        // .delta([0.3, 0.3, 0.3])
+        // .density(2);
         scene.text(30, "add some tea", [2.0, 2.5, 2.5]);
         scene.addKeyframe();
         scene.idle(30);

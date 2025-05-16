@@ -98,7 +98,6 @@ let fluidFromMob = (mob, fluid, amount, exclude_damage) =>
         var damage = Math.min(event.getDamage(), entity.maxHealth)
         var damage_source = source.getType().toString()
         var amountToAdd = amount * damage;
-        console.log("damage: " + damage + " from " + damage_source + ", " + amountToAdd)
         if (damage_source in exclude_damage || amountToAdd <= 0)
             return
         var tanksNearby = blockMatchesInArea("create:fluid_tank", level, Math.floor(entity.getX()), Math.floor(entity.getY()), Math.floor(entity.getZ()), 2, 2, 2)

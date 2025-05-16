@@ -1,0 +1,11 @@
+{
+    "type": "block_transform",
+    "flowing": "#funkyfluids:redstone_suspension",
+    "blocks_nearby": [
+    ],
+    "block_to_transform": "minecraft:sand",
+    "result": {
+        "type": "blocks",
+        "blocks": "minecraft:red_sand"
+    }
+}
