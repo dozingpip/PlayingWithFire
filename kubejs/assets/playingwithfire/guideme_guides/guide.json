@@ -1,0 +1,11 @@
+{
+    "item_settings": {
+      "display_name": "Playing with Fire",
+      "tooltip_lines": [
+        {
+          "text": "Best guide ever!",
+          "color": "dark_gray"
+        }
+      ]
+    }
+  }
