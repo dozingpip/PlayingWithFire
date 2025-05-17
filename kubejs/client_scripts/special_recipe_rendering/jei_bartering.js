@@ -1,5 +1,5 @@
-const $ScreenOpener = Java.loadClass('com.simibubi.create.foundation.gui.ScreenOpener')
-const $PonderTagScreen = Java.loadClass('com.simibubi.create.foundation.ponder.ui.PonderUI')
+// const $ScreenOpener = Java.loadClass('com.simibubi.create.foundation.gui.ScreenOpener')
+// const $PonderTagScreen = Java.loadClass('com.simibubi.create.foundation.ponder.ui.PonderUI')
 // This function will be used by JEI to verify if a custom recipe is apart of this category.
 let verifyRecipe = (recipe) => {
     // The data we give later on in the recipes will be stored in the `data` field.
@@ -39,10 +39,12 @@ JEIAddedEvents.registerCategories((event) => {
     event.custom("kubejs:bartering", (category) => {
         let { jeiHelpers } = category;
         let { guiHelper } = jeiHelpers;
+        category.width = recipeWidth
+        category.height = smallRecipeHeight
         global.barteringRecipeType = category
                 .title("Piglin Bartering")
                 // Set the background of the category to a blank 100x50 drawable canvas.
-                .background(guiHelper.createBlankDrawable(150, 20))
+                .background(guiHelper.createBlankDrawable(category.width, category.height))
                 .icon(guiHelper.createDrawableItemStack(Item.of('minecraft:gold_ingot')))
                 // Set the callback function that will verify if a recipe is a valid recipe for this category.
                 .isRecipeHandled((recipe) => verifyRecipe(recipe))
@@ -95,6 +97,6 @@ JEIAddedEvents.registerRecipes((event) => {
     });
 });
 
-// JEIAddedEvents.registerRecipeCatalysts(event => {
-//     event.data.addRecipeCatalyst('minecraft:gold_ingot', global.barteringRecipeType)
-// })
+JEIAddedEvents.registerRecipeCatalysts(event => {
+    event.data.addRecipeCatalyst('minecraft:gold_ingot', global.barteringRecipeType)
+})

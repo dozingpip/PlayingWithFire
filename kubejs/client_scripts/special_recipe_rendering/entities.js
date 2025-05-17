@@ -6,6 +6,9 @@ const Level = Java.loadClass('net.minecraft.world.level.Level');
 const Entity = Java.loadClass('net.minecraft.world.entity.Entity');
 const AllGuiTextures = Java.loadClass('snownee.lychee.client.gui.AllGuiTextures');
 const GuiGameElement = Java.loadClass('snownee.lychee.client.gui.GuiGameElement');
+const recipeWidth = 150
+const recipeHeight = 80
+const smallRecipeHeight = 20
 // const Blocks = Java.loadClass('net.minecraft.world.level.block.Blocks');
 // const ItemAndBlockBaseCategory = Java.loadClass('snownee.lychee.compat.jei.category.ItemAndBlockBaseCategory');
 const JEIREI = Java.loadClass('snownee.lychee.compat.JEIREI');
@@ -23,21 +26,13 @@ JEIAddedEvents.registerCategories(event => {
         var y = 110;
         recipe.data.output.forEach((outputItem) => 
         {
-            builder.addSlot('output', x, y).addItemStack(outputItem).setSlotName("output" + x.toString() + y.toString());
-            if (x + 20 < 140)
-                x += 20;
-            else
-            {
-                x = 100;
-                y += 20;
-            }
+            builder.addInvisibleIngredients('OUTPUT').addItemStack(outputItem)
         })
     }
 
     let renderRecipe = (r, guiGraphics) => {
         AllGuiTextures.JEI_ARROW.render(guiGraphics, 32, 55);
         guiGraphics.drawWordWrap(Client.font, Text.translatable(r.data.description), 16, 3, 150, 0);
-        guiGraphics.drawWordWrap(Client.font, Text.translatable("drops:"), 80, 100, 100, 0);
 
         let poseStack = guiGraphics.pose();
         poseStack.pushPose();
@@ -78,10 +73,12 @@ JEIAddedEvents.registerCategories(event => {
     event.custom('kubejs:fire_entity', category => {
         let { jeiHelpers } = category;
         let { guiHelper } = jeiHelpers;
+        category.width = recipeWidth
+        category.height = recipeHeight
 
         global.fireEntityRecipeType = category
         .title("Mob spawning")
-        .background(guiHelper.createBlankDrawable(150, 150))
+        .background(guiHelper.createBlankDrawable(category.width, category.height))
         .icon(guiHelper.createDrawableItemStack('minecraft:flint_and_steel'))
         .isRecipeHandled(r => verifyRecipe(r))
         .handleLookup((builder, r, focuses) => handleLookup(builder, r, focuses))
@@ -91,10 +88,12 @@ JEIAddedEvents.registerCategories(event => {
     event.custom('kubejs:other_entity', category => {
         let { jeiHelpers } = category;
         let { guiHelper } = jeiHelpers;
+        category.width = recipeWidth
+        category.height = recipeHeight
 
         global.entityRecipeType = category
         .title("Mob spawning")
-        .background(guiHelper.createBlankDrawable(150, 150))
+        .background(guiHelper.createBlankDrawable(category.width, category.height))
         .icon(guiHelper.createDrawableItemStack('minecraft:clock'))
         .isRecipeHandled(r => verifyRecipe(r))
         .handleLookup((builder, r, focuses) => handleLookup(builder, r, focuses))
@@ -148,10 +147,14 @@ JEIAddedEvents.registerRecipes(event => {
                 output: drops
             });
         }
-    registerRecipe('minecraft:ghast', "minecraft:white_wool", ["minecraft:ghast_tear", "minecraft:gunpowder"], 10, {x:5, y:0}, 'minecraft:fire')
-    registerRecipe('minecraft:enderman', "minecraft:soul_sand", ["minecraft:ender_pearl"], 28, {x:1.2, y:1.2}, 'minecraft:soul_fire')
-    registerRecipe('minecraft:blaze', "minecraft:quartz_block", ["minecraft:blaze_rod"], 30, {x:1.2, y:1}, 'minecraft:fire')
-    registerRecipe('minecraft:wither_skeleton', "minecraft:nether_bricks", ["minecraft:coal", "minecraft:bone", "minecraft:wither_skeleton_skull"], 30, {x:1.2, y:1}, 'minecraft:fire')
-    registerRecipe2('minecraft:magma_cube', "minecraft:magma_block", ["minecraft:magma_cream"], 30, {x:1.7, y:1})
-    registerRecipe2('minecraft:zombified_piglin', "minecraft:stripped_warped_stem", ["minecraft:rotten_flesh", "minecraft:gold_nugget", "minecraft:gold_ingot"], 30, {x:1.3, y:1})
+    registerRecipe('minecraft:ghast', "minecraft:white_wool", ["minecraft:ghast_tear", "minecraft:gunpowder"], 10, {x:5, y:-0.2}, 'minecraft:fire')
+    registerRecipe('minecraft:enderman', "minecraft:soul_sand", ["minecraft:ender_pearl"], 25, {x:1.2, y:1}, 'minecraft:soul_fire')
+    registerRecipe('minecraft:blaze', "minecraft:quartz_block", ["minecraft:blaze_rod"], 30, {x:1.2, y:0.8}, 'minecraft:fire')
+    registerRecipe('minecraft:wither_skeleton', "minecraft:nether_bricks", ["minecraft:coal", "minecraft:bone", "minecraft:wither_skeleton_skull"], 28, {x:1.2, y:0.8}, 'minecraft:fire')
+    registerRecipe2('minecraft:magma_cube', "minecraft:magma_block", ["minecraft:magma_cream"], 30, {x:1.7, y:0.5})
+    registerRecipe2('minecraft:zombified_piglin', "minecraft:stripped_warped_stem", ["minecraft:rotten_flesh", "minecraft:gold_nugget", "minecraft:gold_ingot"], 30, {x:1.3, y:0.5})
+})
+
+JEIAddedEvents.registerRecipeCatalysts(event => {
+    event.data.addRecipeCatalyst("minecraft:flint_and_steel", global.fireEntityRecipeType)
 })

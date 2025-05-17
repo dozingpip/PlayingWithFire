@@ -22,10 +22,12 @@ JEIAddedEvents.registerCategories(event => {
     event.custom('kubejs:amethyst_growing', category => {
         let { jeiHelpers } = category;
         let { guiHelper } = jeiHelpers;
+        category.width = recipeWidth
+        category.height = smallRecipeHeight
 
         global.entityRecipeType = category
         .title("Amethyst growing")
-        .background(guiHelper.createBlankDrawable(150, 150))
+        .background(guiHelper.createBlankDrawable(category.width, category.height))
         .icon(guiHelper.createDrawableItemStack('minecraft:amethyst_cluster'))
         .isRecipeHandled(r => verifyRecipe(r))
         .handleLookup((builder, r, focuses) => handleLookup(builder, r, focuses))
