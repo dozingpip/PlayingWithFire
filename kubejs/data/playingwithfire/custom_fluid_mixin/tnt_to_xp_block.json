@@ -5,7 +5,7 @@
     ],
     "block_to_transform": "minecraft:tnt",
     "result": {
-        "type": "blocks",
-        "blocks": "create:experience_block"
+        "type": "block",
+        "block": "create:experience_block"
     }
 }

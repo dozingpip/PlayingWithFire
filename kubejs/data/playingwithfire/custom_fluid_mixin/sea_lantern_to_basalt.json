@@ -6,7 +6,7 @@
         "minecraft:sea_lantern"
     ],
     "result": {
-        "type": "blocks",
-        "blocks": "minecraft:basalt"
+        "type": "block",
+        "block": "minecraft:basalt"
     }
 }

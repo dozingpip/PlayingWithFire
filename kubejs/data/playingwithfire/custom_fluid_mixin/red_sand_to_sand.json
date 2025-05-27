@@ -5,7 +5,7 @@
     ],
     "block_to_transform": "minecraft:red_sand",
     "result": {
-        "type": "blocks",
-        "blocks": "minecraft:sand"
+        "type": "block",
+        "block": "minecraft:sand"
     }
 }

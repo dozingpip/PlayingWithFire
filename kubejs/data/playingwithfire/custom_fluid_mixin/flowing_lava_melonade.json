@@ -3,7 +3,7 @@
     "flowing": "#minecraft:lava",
     "blocks_nearby": ["funkyfluids:melonade_block"],
     "result": {
-        "type": "blocks",
-        "blocks": "minecraft:netherrack"
+        "type": "block",
+        "block": "minecraft:netherrack"
     }
 }

@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
             },
             {
                 "type":"execute",
-                "command": "summon minecraft:piglin ~ ~ ~",
+                "command": "summon minecraft:piglin ~ ~ ~ {CustomName:'{\"text\":\"Bob\"}'}",
                 "hide": false
             }
         ]

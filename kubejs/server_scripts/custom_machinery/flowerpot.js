@@ -130,7 +130,7 @@ ServerEvents.recipes(event => {
                 {
                     let itemObject
                     if (ingredient.has("tag"))
-                        itemObject = Item.of("#" + ingredient.get("tag").toString().replace('"', ""))
+                        itemObject = Ingedient.of("#" + ingredient.get("tag").toString().replace('"', ""))
                     else
                         itemObject = Item.of(ingredient.get("item").toString().replace('"', ""))
                     flower_recipe.consumeDropOnStart(itemObject, 1, 2)
@@ -185,7 +185,7 @@ ServerEvents.recipes(event => {
     .destroyBlockOnEnd("minecraft:chorus_flower", true, -1, -1, -1, 1, 1, 1, 1)
     .destroyBlockOnEnd("minecraft:ender_chest", true, -1, -1, -1, 1, 1, 1, 1)
     .destroyBlockOnEnd("minecraft:turtle_egg", true, -1, -1, -1, 1, 1, 1, 1)
-    .runCommandOnEnd("/summon minecraft:shulker ~ ~ ~")
+    .runCommandOnEnd("/summon minecraft:shulker ~ ~ ~ {CustomName:'{\"text\":\"Mr.Shulker\"}'}")
     .jei()
     .requireFluid(global.potionFluid("minecraft:awkward", 250))
     .requireItem("minecraft:turtle_egg")

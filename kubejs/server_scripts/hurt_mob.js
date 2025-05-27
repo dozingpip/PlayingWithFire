@@ -73,24 +73,6 @@ EntityEvents.hurt("minecraft:blaze", event => {
             thisBlock.set("minecraft:fire")
 })
 
-let blockMatchesInArea = (blockid, l, origin_x, origin_y, origin_z, width, height, depth) =>
-{
-    var results = []
-    for (let i = origin_x - width; i <= origin_x + width; i++)
-    {
-        for (let j = origin_y - height; j <= origin_y + height; j++)
-        {
-            for (let k = origin_z - depth; k <= origin_z + depth; k++)
-            {
-                let block = l.getBlock(i, j, k)
-                if(block.id == blockid)
-                    results.push([i, j, k, block])
-            }
-        }
-    }
-    return results
-}
-
 let fluidFromMob = (mob, fluid, amount, exclude_damage) =>
 {
     EntityEvents.hurt(mob, event => {
@@ -100,50 +82,7 @@ let fluidFromMob = (mob, fluid, amount, exclude_damage) =>
         var amountToAdd = amount * damage;
         if (damage_source in exclude_damage || amountToAdd <= 0)
             return
-        var tanksNearby = blockMatchesInArea("create:fluid_tank", level, Math.floor(entity.getX()), Math.floor(entity.getY()), Math.floor(entity.getZ()), 2, 2, 2)
-        var resolved = false
-        var tankIndex = 0
-        if (tanksNearby.length <= 0)
-            return
-        while(!resolved && tankIndex < tanksNearby.length)
-        {
-            var tank = tanksNearby[tankIndex][3]
-            var tankData = tank.getEntityData()
-            var maxFluid = 8000
-            if ("Controller" in tankData)
-            {
-                var controller = tankData.get("Controller")
-                tank = level.getBlock(parseInt(controller.get("X")), parseInt(controller.get("Y")), parseInt(controller.get("Z")))
-                tankData = tank.getEntityData()
-            }
-            if("Size" in tankData)
-            {
-                var size = parseInt(tankData.get("Size"))
-                var height = parseInt(tankData.get("Height"))
-                maxFluid = size * size * height * 8000
-            }
-            var tankContent = tankData.get("TankContent")
-            if (tankContent.get("FluidName") == "minecraft:empty")
-            {
-                resolved = true
-                tank.mergeEntityData({TankContent:{FluidName:fluid, Amount:amountToAdd}});
-            }
-            else if (tankContent.get("FluidName") == fluid)
-            {
-                var currentAmount = parseInt(tankContent.get("Amount"))
-                if (currentAmount + amountToAdd <= maxFluid)
-                {
-                    resolved = true
-                    var finalAmount = currentAmount + amountToAdd
-                    console.log("tank has: " + currentAmount + ", and will have at end: " + finalAmount)
-                    tank.mergeEntityData({TankContent:{FluidName:fluid, Amount: finalAmount}});
-                }
-            }
-            if(!resolved)
-            {
-                tankIndex += 1
-            }
-        }
+        global.addFluidToTank(fluid, amountToAdd, level, entity.getX(), entity.getY(), entity.getZ())
     })
 }
 

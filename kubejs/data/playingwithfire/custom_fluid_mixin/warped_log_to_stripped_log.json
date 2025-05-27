@@ -5,7 +5,7 @@
     ],
     "block_to_transform": "minecraft:warped_stem",
     "result": {
-        "type": "blocks",
-        "blocks": "minecraft:stripped_warped_stem"
+        "type": "block",
+        "block": "minecraft:stripped_warped_stem"
     }
 }

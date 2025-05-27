@@ -1,4 +1,8 @@
-let addRemoveFluid = (player, item, fluidName, machine, full_item, empty_item, amount) =>
+let addRemoveBucketFromFluidTank = (player, item, fluidName, tank, amount) =>
+{
+
+}
+let addRemoveFluidFromMachine = (player, item, fluidName, machine, full_item, empty_item, amount) =>
 {
     let fluid = machine.getFluidStored("fluid")
     let result = false;
@@ -62,7 +66,7 @@ BlockEvents.rightClicked(event => {
     if (block.id == 'kubejs:teatable')
     {
         let machine = CustomMachine.of(block)
-        let successTea = addRemoveFluid(player, item, "create:tea", machine, "create:builders_tea", "minecraft:glass_bottle", 250)
+        let successTea = addRemoveFluidFromMachine(player, item, "create:tea", machine, "create:builders_tea", "minecraft:glass_bottle", 250)
         let successPotion = addRemovePotionFluid(player, item, machine, 250)
         // success = success || addRemoveFluid(player, item, "create:honey", machine, "minecraft:honey_bottle", "minecraft:glass_bottle", 500)
         if(successTea || successPotion)
@@ -108,28 +112,28 @@ BlockEvents.rightClicked(event => {
     }
     else if(block.id == 'create:blaze_burner' && event.hand == 'main_hand')
     {
-        let cost = 10
-        let limit = 0
-        let min = 0
+        let costPerBlock = 10
+        let blockLimit = 0
+        let minBlocks = 0
         let state = block.getProperties().blaze
         let burnTimeRemaining = block.getEntityData().get("burnTimeRemaining")
         if(state == "smouldering" || state == "none")
-            limit = 0
-        else if(state == "kindled")
+            blockLimit = 0
+        else if(state == "kindled" || state == "fading")
         {
-            min = 1
-            limit = 5
+            minBlocks = 1
+            blockLimit = 5
         }
         else if(state == "seething")
         {
-            limit = 9
-            min = 4
+            blockLimit = 9
+            minBlocks = 4
         }
-        if(burnTimeRemaining - (cost*range) <= 0)
-            limit = Math.floor(burnTimeRemaining / cost)
-        let range = Math.floor(Math.random()*limit) + min
+        if(burnTimeRemaining - (costPerBlock*blockLimit) <= 0)
+            blockLimit = Math.floor(burnTimeRemaining / costPerBlock)
+        let range = Math.floor(Math.random()*blockLimit) + minBlocks
         let burned = 0
-        for (let i = 1; i < range; i++)
+        for (let i = 1; i < range +1; i++)
         {
             let b = block.offset(event.getFacing().opposite, i)
             let down = b.getDown()
@@ -145,7 +149,8 @@ BlockEvents.rightClicked(event => {
         if(burned > 0)
         {
             level.runCommandSilent(`playsound minecraft:entity.blaze.shoot neutral @p`)
-            block.setEntityData({"burnTimeRemaining": burnTimeRemaining - (cost * burned)})
+            block.setEntityData({"burnTimeRemaining": burnTimeRemaining - (costPerBlock * burned)})
+            player.swing()
             // let burnTimeRemainingAfter = block.getEntityData().get("burnTimeRemaining")
             // Utils.server.tell("remaining: " + burnTimeRemaining + ", after: " + burnTimeRemainingAfter)
         }

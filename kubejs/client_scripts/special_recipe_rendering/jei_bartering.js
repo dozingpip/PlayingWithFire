@@ -23,6 +23,7 @@ let verifyRecipe = (recipe) => {
 // in the recipe lookup.
 // Refer to the JEI API for more information on how to use this.
 let handleLookup = (builder, recipe, focuses) => {
+    builder.addInvisibleIngredients('INPUT').addItemStack('minecraft:gold_ingot')
     builder.addSlot("OUTPUT", 2, 2).addItemStack(recipe.data.item).setSlotName("loot");
 }
 
@@ -97,6 +98,6 @@ JEIAddedEvents.registerRecipes((event) => {
     });
 });
 
-JEIAddedEvents.registerRecipeCatalysts(event => {
-    event.data.addRecipeCatalyst('minecraft:gold_ingot', global.barteringRecipeType)
-})
+// JEIAddedEvents.registerRecipeCatalysts(event => {
+//     event.data.addRecipeCatalyst('minecraft:gold_ingot', global.barteringRecipeType)
+// })

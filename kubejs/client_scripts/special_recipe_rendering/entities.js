@@ -22,8 +22,6 @@ JEIAddedEvents.registerCategories(event => {
     let handleLookup = (builder, recipe) => {
         // Required because JEI doesn't seem to build a category if it has no slots
         builder.addSlot('input', 0, 0).addItemStack(recipe.data.input).setSlotName("input");
-        var x = 78;
-        var y = 110;
         recipe.data.output.forEach((outputItem) => 
         {
             builder.addInvisibleIngredients('OUTPUT').addItemStack(outputItem)

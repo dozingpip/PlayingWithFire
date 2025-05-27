@@ -1,11 +1,11 @@
 {
     "type": "block_transform",
     "flowing": "#minecraft:lava",
+    "block_to_transform": "minecraft:soul_sand",
     "blocks_nearby": [
     ],
-    "block_to_transform": "minecraft:soul_sand",
     "result": {
-        "type": "blocks",
-        "blocks": "minecraft:quartz_block"
+        "type": "block",
+        "block": "minecraft:quartz_block"
     }
 }

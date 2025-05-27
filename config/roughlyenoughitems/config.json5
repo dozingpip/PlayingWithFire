@@ -66,7 +66,7 @@
 			"showCraftableOnlyButton": true
 		},
 		// Declares the appearance of recipe's border.
-		"recipeBorder": "NONE",
+		"recipeBorder": "LIGHTER",
 		// Declares whether entry panel is scrolled.
 		"scrollingEntryListWidget": false,
 		// Declares whether entry panel should be invisible when not searching
@@ -237,7 +237,8 @@
 					"botania:marimorphosis",
 					"minecraft:plugins/tag",
 					"playingwithfire:venus_fish_trap",
-					"lychee:item_inside/minecraft/default"
+					"lychee:item_inside/minecraft/default",
+					"kubejsadditions:painful_blocks"
 				],
 				"hiddenCategories": [
 					"minecraft:plugins/tilling",

@@ -5,7 +5,7 @@
     ],
     "block_to_transform": "minecraft:netherrack",
     "result": {
-        "type": "blocks",
-        "blocks": "minecraft:nether_bricks"
+        "type": "block",
+        "block": "minecraft:nether_bricks"
     }
 }

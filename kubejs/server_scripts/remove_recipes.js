@@ -9,4 +9,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'funkyfluids:magnetroleum_bucket'})
     event.remove({type: 'create:fan_washing'})
     event.replaceInput({input: "minecraft:obsidian"}, "minecraft:obsidian", "#forge:obsidian")
+    event.replaceInput({input: "minecraft:cobblestone", input: "minecraft:redstone"}, "minecraft:cobblestone", "#forge:stone")
+    event.replaceInput({output: "minecraft:lever"}, "minecraft:cobblestone", "#forge:stone")
 })
