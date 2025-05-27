@@ -1,0 +1,11 @@
+{
+    "type": "block_transform",
+    "flowing": "#minecraft:lava",
+    "block_to_transform": "minecraft:pumpkin",
+    "blocks_nearby": [
+    ],
+    "result": {
+        "type": "block",
+        "block": "minecraft:dried_kelp_block"
+    }
+}

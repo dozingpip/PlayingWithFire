@@ -11,7 +11,7 @@ event.recipes.create.mixing("minecraft:piglin_spawn_egg", ["minecraft:turtle_egg
 
 // fluid creation
 event.recipes.create.mixing(Fluid.of("minecraft:milk", 1000), ["minecraft:bone_block", "minecraft:sugar", global.potionFluid("minecraft:awkward", 250)]).heated().id("playingwithfire:mixing/milk");
-event.recipes.create.mixing(Fluid.of("funkyfluids:silly_putty", 1000), ["minecraft:slime_ball", Fluid.of("funkyfluids:magnetroleum", 1000), Fluid.of("create:honey", 250), "#minecraft:fishes"]).heated().id("playingwithfire:mixing/silly_putty");
+event.recipes.create.mixing(Fluid.of("funkyfluids:silly_putty", 1000), ["minecraft:slime_ball", Fluid.of("create:honey", 250), "#minecraft:fishes"]).heated().id("playingwithfire:mixing/silly_putty");
 event.recipes.create.mixing(Fluid.of("funkyfluids:magnetroleum", 1000), ["minecraft:lapis_lazuli", "botania:manasteel_ingot", Fluid.of("funkyfluids:redstone_suspension", 250)]).superheated().id("playingwithfire:mixing/magtroleum");
 event.recipes.create.mixing(Fluid.of("funkyfluids:oobleck", 1000), [Item.of("minecraft:potato", 2), global.potionFluid("minecraft:awkward", 1000)]).heated().id("playingwithfire:mixing/oobleck");
 event.recipes.create.mixing(Fluid.of("funkyfluids:redstone_suspension", 1000), [Item.of("minecraft:redstone", 2), "botania:rune_water", global.potionFluid("minecraft:awkward", 1000)]).heated().id("playingwithfire:mixing/redstone_suspension");

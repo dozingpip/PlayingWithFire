@@ -6,7 +6,7 @@ global.addFluidToTank = (fluid, amount, level, x, y, z) =>
     var tankIndex = 0
     if (tanksNearby.length <= 0)
     {
-        global.print("no tanks nearby")
+        // global.print("no tanks nearby")
         return
     }
     while(!resolved && tankIndex < tanksNearby.length)
