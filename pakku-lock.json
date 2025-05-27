@@ -4,8 +4,7 @@
         "1.20.1"
     ],
     "loaders": {
-        "neoforge": "47.1.106",
-        "forge": "47.3.11"
+        "forge": "47.4.0"
     },
     "projects": [
         {
@@ -636,6 +635,79 @@
                     ],
                     "size": 1004847,
                     "date_published": "2024-10-07T23:13:52.715401Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "iUFoD3jthrijo79J",
+            "pakku_links": [
+                "IRO8O3X8kPz3nYBc",
+                "LYuCAKCWw3SRCScD"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "entityjs",
+                "modrinth": "entityjs"
+            },
+            "name": {
+                "curseforge": "EntityJS",
+                "modrinth": "EntityJS"
+            },
+            "id": {
+                "curseforge": "967617",
+                "modrinth": "OvPZ16yX"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "entityjs-0.4.9-1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6532/356/entityjs-0.4.9-1.20.1.jar",
+                    "id": "6532356",
+                    "parent_id": "967617",
+                    "hashes": {
+                        "sha1": "483333f7e18150a2d6e9ca9a75176ea4c8cf1f13",
+                        "md5": "8e9b6817e6e5ec5eda174e760ede0274"
+                    },
+                    "required_dependencies": [
+                        "388172",
+                        "238086"
+                    ],
+                    "size": 2248456,
+                    "date_published": "2025-05-15T13:52:55.453Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "entityjs-0.4.9-1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/OvPZ16yX/versions/lzpZC9Ce/entityjs-0.4.9-1.20.1.jar",
+                    "id": "lzpZC9Ce",
+                    "parent_id": "OvPZ16yX",
+                    "hashes": {
+                        "sha512": "8ce8d6ac937dfc8c7e2af1ded42e2428399f8cfa9c928ffde1eb47c9f072b6013d00e05d1f6a4ceb377ca1c0d967988c5e9cb7de6324eea5979949d8af622a69",
+                        "sha1": "483333f7e18150a2d6e9ca9a75176ea4c8cf1f13"
+                    },
+                    "required_dependencies": [
+                        "umyGl7zF",
+                        "8BmcQJ2H"
+                    ],
+                    "size": 2248456,
+                    "date_published": "2025-05-15T13:54:54.915275Z"
                 }
             ]
         },
@@ -1565,71 +1637,6 @@
             ]
         },
         {
-            "pakku_id": "C05nNCXtoMNKAj2v",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "mini-effects",
-                "curseforge": "mini-effects"
-            },
-            "name": {
-                "modrinth": "Mini Effects",
-                "curseforge": "Mini Effects (Forge)"
-            },
-            "id": {
-                "modrinth": "UqcThEX0",
-                "curseforge": "502649"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "MiniEffects-1.20.1-forge-7.0.1.jar",
-                    "mc_versions": [
-                        "1.20",
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/UqcThEX0/versions/dRAaA2ec/MiniEffects-1.20.1-forge-7.0.1.jar",
-                    "id": "dRAaA2ec",
-                    "parent_id": "UqcThEX0",
-                    "hashes": {
-                        "sha512": "3037dfe6c02856bf1da9ac6a0b3db226bd27c1a0c2787a10ee114fe8cedae13231105819fd64dba8f6f3959a362ae66095fa69cce2e61a029e4404b4c3d00b69",
-                        "sha1": "4471cb3ba11a0b4c5312c00487cb0a6e17c4779d"
-                    },
-                    "required_dependencies": [
-                    ],
-                    "size": 14324,
-                    "date_published": "2023-06-17T13:51:16.758160Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "MiniEffects-1.20.1-forge-7.0.1.jar",
-                    "mc_versions": [
-                        "1.20.1",
-                        "1.20"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/4593/109/MiniEffects-1.20.1-forge-7.0.1.jar",
-                    "id": "4593109",
-                    "parent_id": "502649",
-                    "hashes": {
-                        "sha1": "4471cb3ba11a0b4c5312c00487cb0a6e17c4779d",
-                        "md5": "c1843fa87f10e174beaf7f4c2670e917"
-                    },
-                    "required_dependencies": [
-                    ],
-                    "size": 14324,
-                    "date_published": "2023-06-17T13:52:41.617Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "ArvBMp578G2JsGX0",
             "pakku_links": [
                 "IRO8O3X8kPz3nYBc"
@@ -1965,6 +1972,71 @@
                     ],
                     "size": 446079,
                     "date_published": "2024-09-24T18:00:33.377Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "D21sC83f5dB3GnKS",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "storagedrawers",
+                "curseforge": "storage-drawers"
+            },
+            "name": {
+                "modrinth": "Storage Drawers",
+                "curseforge": "Storage Drawers"
+            },
+            "id": {
+                "modrinth": "guitPqEi",
+                "curseforge": "223852"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "StorageDrawers-1.20.1-12.9.14.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/guitPqEi/versions/yt3QLYcE/StorageDrawers-1.20.1-12.9.14.jar",
+                    "id": "yt3QLYcE",
+                    "parent_id": "guitPqEi",
+                    "hashes": {
+                        "sha512": "1527b3f5b03a2e4277ad01b231d6890095d2043cc2ba202c47527fd02634c7577e995f7c8bd012f4300581977755958927ed6a1fcef6d2db8a6efaaad74dc8ec",
+                        "sha1": "d42027b75690a27f0e915fea0988d40571eeec11"
+                    },
+                    "required_dependencies": [
+                    ],
+                    "size": 950686,
+                    "date_published": "2025-05-20T04:49:34.329627Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "StorageDrawers-1.20.1-12.9.14.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6549/483/StorageDrawers-1.20.1-12.9.14.jar",
+                    "id": "6549483",
+                    "parent_id": "223852",
+                    "hashes": {
+                        "sha1": "0f96a4f409515d660ed7fb206edb2fd998bfbf29",
+                        "md5": "4e094e3c00d716baab7a4cb233f01183"
+                    },
+                    "required_dependencies": [
+                    ],
+                    "size": 950686,
+                    "date_published": "2025-05-20T04:49:25.167Z"
                 }
             ]
         }
