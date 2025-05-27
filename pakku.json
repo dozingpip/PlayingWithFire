@@ -1,6 +1,6 @@
 {
     "name": "Playing With Fire",
-    "version": "1.9.0",
+    "version": "1.9.1",
     "overrides": [
         "config/defaultworldtype/",
         "config/kiwi-client.yaml",
