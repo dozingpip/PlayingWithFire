@@ -7,7 +7,7 @@ ServerEvents.recipes(event => {
             "offsetY": 1,
             "predicate": {
                 "block": {
-                    "blocks": [ "minecraft:air" ]
+                    "blocks": [ "minecraft:air", "minecraft:lava" ]
                 }
             }
         },
