@@ -40,7 +40,7 @@ global.addFluidToTank = (fluid, amount, level, x, y, z) =>
             {
                 resolved = true
                 var finalAmount = currentAmount + amount
-                global.print("tank has: " + currentAmount + ", and will have at end: " + finalAmount)
+                // global.print("tank has: " + currentAmount + ", and will have at end: " + finalAmount)
                 tank.mergeEntityData({TankContent:{FluidName:fluid, Amount: finalAmount}});
             }
         }
