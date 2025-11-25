@@ -1,5 +1,5 @@
 ServerEvents.recipes(event => {
-    let lava_dip = (input, output) =>
+    let burning = (input, output) =>
     {
         {
             event.custom({
@@ -16,33 +16,19 @@ ServerEvents.recipes(event => {
             }).id("playingwithfire:burning/" + (output.substring(output.lastIndexOf(":")+1)));
         }
     }
-    let fluid_dip = (input, output, count, fluid) =>
-    {
-        {
-            event.custom({
-                type: "lychee:item_inside",
-                item_in: {
-                    item: input
-                },
-                block_in: {
-                    blocks: [fluid],
-                    state: {
-                        "level": 0
-                    }
-                },
-                post: [
-                    {
-                        type: "drop_item",
-                        item: output,
-                        count: count
-                    },
-                    {
-                        type: "place",
-                        block: "*"
-                    }
-                ]
-            }).id("playingwithfire:fluid_dip/" + (output.substring(output.lastIndexOf(":")+1)));
-        }
-    }
-    lava_dip("weeping_vines", "netherrack")
+    burning("weeping_vines", "netherrack")
+
+    event.custom({
+        type: "lychee:item_burning",
+        comment: "spawns 3x3 of fire",
+        item_in: {
+            item: "blaze_powder"
+        },
+        post: [
+            {
+                type: "execute",
+                command: "fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:fire"
+            }
+        ]
+    }).id("playingwithfire:burning/blaze_powder")
 });
