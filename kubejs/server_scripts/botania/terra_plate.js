@@ -17,9 +17,9 @@ ServerEvents.recipes(event => {
         {item:"netherdepthsupgrade:lava_fishing_rod"}, {item:"botania:star_sword"}, {item:"botania:flare_chakram"}, {item:"create:potato_cannon"}, {tag:"minecraft:music_discs"}]);
     plate("botania:flugel_eye", 20000, [{item:"minecraft:lodestone"},
         {item:"minecraft:shulker_spawn_egg"}, {item:"botania:third_eye"}, {item:"botania:light_relay"}, {tag:"minecraft:music_discs"}]);
-    plate("minecraft:nether_star", 20000, [{item:"botania:king_key"},
-        {item:"minecraft:wither_skeleton_skull"}, {tag:"minecraft:music_discs"}]);
-    plate("botania:life_essence", 30000, [{item:"minecraft:fire_coral_block"},
+    plate("minecraft:nether_star", 600000, [{item:"botania:king_key"},
+        {item:"minecraft:wither_skeleton_skull"}, {item:"minecraft:wither_skeleton_skull"}, {item:"minecraft:wither_skeleton_skull"}, {tag:"minecraft:music_discs"}]);
+    plate("botania:life_essence", 600000, [{item:"botania:king_key"}, {item:"minecraft:fire_coral_block"},
         {item:"minecraft:beacon"}, {item:"botania:gaia_pylon"}, {tag:"minecraft:music_discs"}]);
     plate("minecraft:deepslate_diamond_ore", 10000, [{item:"create:powdered_obsidian"},
         {item:"minecraft:lapis_lazuli"}, {item:"botania:manasteel_nugget"}]);
