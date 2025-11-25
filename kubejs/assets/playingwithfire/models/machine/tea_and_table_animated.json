@@ -5,7 +5,7 @@
 	"textures": {
 		"5": "playingwithfire:block/tea_twist_flow",
 		"flowerpot": "playingwithfire:block/flower_pot",
-		"dirt": "playingwithfire:block/tea_still",
+		"dirt": "playingwithfire:fluid/tea_still",
 		"particle": "playingwithfire:block/livingwood_planks",
 		"side": "playingwithfire:block/livingwood_planks",
 		"top": "playingwithfire:block/mana_bomb_animated",
