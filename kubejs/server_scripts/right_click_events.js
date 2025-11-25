@@ -84,7 +84,20 @@ BlockEvents.rightClicked(event => {
             }
         }
     }
-    else if(block.id == 'minecraft:flower_pot')
+    else if(item.id == 'create:filter' && event.hand == 'main_hand' && player.crouching)
+    {
+        let nbt = item.serializeNBT()
+        if(nbt.tag.hasOwnProperty("Items")){
+            let list = nbt.tag.Items.Items
+            let last = list.get(list.size() -1).copy()
+            last.Slot += 1
+            last.id = block.id
+            nbt.tag.Items.Items.add(last)
+            item.deserializeNBT(nbt)
+            console.log(item.serializeNBT())
+        }
+    }
+    else if(block.id == 'minecraft:flower_pot' && !player.crouching)
     {
         switch(item.id)
         {
