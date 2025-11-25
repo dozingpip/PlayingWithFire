@@ -114,12 +114,12 @@ BlockEvents.rightClicked(event => {
                 break;
         }
     }
-    else if(block.id == 'kubejs:potted_sugar_cane')
+    else if(block.id == 'kubejs:potted_sugar_cane' && !player.crouching)
     {
         player.giveInHand('minecraft:sugar_cane')
         level.setBlock(block.pos, Block.getBlock('minecraft:flower_pot').withPropertiesOf(block.blockState), 3)
     }
-    else if(block.id == 'kubejs:potted_twisting_vines')
+    else if(block.id == 'kubejs:potted_twisting_vines' && !player.crouching)
     {
         player.giveInHand('minecraft:twisting_vines')
         level.setBlock(block.pos, Block.getBlock('minecraft:flower_pot').withPropertiesOf(block.blockState), 3)
