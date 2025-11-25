@@ -45,6 +45,6 @@ JEIAddedEvents.registerRecipes(event => {
     }
     registerRecipe("minecraft:sand", "minecraft:clay_ball")
 })
-JEIAddedEvents.registerRecipeCatalysts(event => {
-    event.data.addRecipeCatalyst(Item.of('botania:clayconia'), global.clayconiaRecipeType)
-})
+// JEIAddedEvents.registerRecipeCatalysts(event => {
+//     event.data.addRecipeCatalyst(Item.of('botania:clayconia'), global.clayconiaRecipeType)
+// })

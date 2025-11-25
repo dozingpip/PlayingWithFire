@@ -45,6 +45,6 @@ JEIAddedEvents.registerRecipes(event => {
     registerRecipe("minecraft:calcite", "minecraft:budding_amethyst")
 })
 
-JEIAddedEvents.registerRecipeCatalysts(event => {
-    event.data.addRecipeCatalyst('minecraft:lightning_rod', global.lightningRecipeType)
-})
+// JEIAddedEvents.registerRecipeCatalysts(event => {
+//     event.data.addRecipeCatalyst('minecraft:lightning_rod', global.lightningRecipeType)
+// })

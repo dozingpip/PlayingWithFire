@@ -153,6 +153,6 @@ JEIAddedEvents.registerRecipes(event => {
     registerRecipe2('minecraft:zombified_piglin', "minecraft:stripped_warped_stem", ["minecraft:rotten_flesh", "minecraft:gold_nugget", "minecraft:gold_ingot"], 30, {x:1.3, y:0.5})
 })
 
-JEIAddedEvents.registerRecipeCatalysts(event => {
-    event.data.addRecipeCatalyst("minecraft:flint_and_steel", global.fireEntityRecipeType)
-})
+// JEIAddedEvents.registerRecipeCatalysts(event => {
+//     event.data.addRecipeCatalyst("minecraft:flint_and_steel", global.fireEntityRecipeType)
+// })
