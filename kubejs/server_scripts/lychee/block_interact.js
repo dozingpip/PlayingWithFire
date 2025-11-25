@@ -59,4 +59,22 @@ ServerEvents.recipes(event => {
             {type: "drop_item", item: "flowering_azalea_leaves"},
         ]
     }).id("playingwithfire:block_interact/azalea_tree");
+    event.custom({
+        type: "lychee:block_interacting",
+        hide_in_viewer: true,
+        block_in: "minecraft:bamboo_sapling",
+        item_in: {item:"minecraft:gravel"},
+        post:
+        [
+            {type: "place", block: "minecraft:pointed_dripstone"},
+            {type:"execute", command: "playsound minecraft:block.gravel.place block @s"}
+        ]
+    }).id("playingwithfire:block_interact/dripstone_hide");
+    event.custom({
+        type: "lychee:block_interacting",
+        ghost: true,
+        block_in: "minecraft:bamboo_sapling",
+        item_in: [{item:"minecraft:gravel"}, {item:"minecraft:bamboo", "lychee:tag":{display:{Name: "{\"text\":\"Place me\"}"}}}],
+        post: [{type: "place", block: "minecraft:pointed_dripstone"}]
+    }).id("playingwithfire:block_interact/dripstone");
 });
