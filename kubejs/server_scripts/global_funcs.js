@@ -71,3 +71,48 @@ global.blockMatchesInArea = (blockid, l, origin_x, origin_y, origin_z, width, he
 }
 
 global.print = (str) => Utils.server.tell(str)
+
+global.burn = (block) => {
+    let costPerBlock = 10
+    let blockLimit = 0
+    let minBlocks = 0
+    let state = block.getProperties().blaze
+    let data = block.getEntityData()
+    let direction = data.get("burnDirection")
+    let burnTimeRemaining = data.get("burnTimeRemaining")
+    if(state == "smouldering" || state == "none")
+        blockLimit = 0
+    else if(state == "kindled" || state == "fading")
+    {
+        minBlocks = 1
+        blockLimit = 5
+    }
+    else if(state == "seething")
+    {
+        blockLimit = 9
+        minBlocks = 4
+    }
+    if(burnTimeRemaining - (costPerBlock*blockLimit) <= 0)
+        blockLimit = Math.floor(burnTimeRemaining / costPerBlock)
+    let range = Math.floor(Math.random()*blockLimit) + minBlocks
+    let burned = 0
+    for (let i = 1; i < range +1; i++)
+    {
+        let b = block.offset(direction, i)
+        let down = b.getDown()
+        if (b.id == "minecraft:air" && down.id != "minecraft:air")
+        {
+            if(down.id == "minecraft:soul_sand" || down.id == "minecraft:soul_soil")
+                b.set('minecraft:soul_fire')
+            else
+                b.set('minecraft:fire')
+            burned += 1
+        }
+    }
+    if(burned > 0)
+    {
+        level.runCommandSilent(`playsound minecraft:entity.blaze.shoot neutral @p`)
+        block.setEntityData({"burnTimeRemaining": burnTimeRemaining - (costPerBlock * burned)})
+    }
+    return burned > 0
+}

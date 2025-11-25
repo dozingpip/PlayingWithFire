@@ -126,44 +126,12 @@ BlockEvents.rightClicked(event => {
     }
     else if(block.id == 'create:blaze_burner' && event.hand == 'main_hand')
     {
-        let costPerBlock = 10
-        let blockLimit = 0
-        let minBlocks = 0
-        let state = block.getProperties().blaze
-        let burnTimeRemaining = block.getEntityData().get("burnTimeRemaining")
-        if(state == "smouldering" || state == "none")
-            blockLimit = 0
-        else if(state == "kindled" || state == "fading")
+        let newfacing = event.getFacing().opposite
+        let burned = global.burn(block)
+        global.print(newfacing)
+        global.print(block.getEntityData().get("burnDirection"))
+        if (burned)
         {
-            minBlocks = 1
-            blockLimit = 5
-        }
-        else if(state == "seething")
-        {
-            blockLimit = 9
-            minBlocks = 4
-        }
-        if(burnTimeRemaining - (costPerBlock*blockLimit) <= 0)
-            blockLimit = Math.floor(burnTimeRemaining / costPerBlock)
-        let range = Math.floor(Math.random()*blockLimit) + minBlocks
-        let burned = 0
-        for (let i = 1; i < range +1; i++)
-        {
-            let b = block.offset(event.getFacing().opposite, i)
-            let down = b.getDown()
-            if (b.id == "minecraft:air" && down.id != "minecraft:air")
-            {
-                if(down.id == "minecraft:soul_sand" || down.id == "minecraft:soul_soil")
-                    b.set('minecraft:soul_fire')
-                else
-                    b.set('minecraft:fire')
-                burned += 1
-            }
-        }
-        if(burned > 0)
-        {
-            level.runCommandSilent(`playsound minecraft:entity.blaze.shoot neutral @p`)
-            block.setEntityData({"burnTimeRemaining": burnTimeRemaining - (costPerBlock * burned)})
             player.swing()
             // let burnTimeRemainingAfter = block.getEntityData().get("burnTimeRemaining")
             // Utils.server.tell("remaining: " + burnTimeRemaining + ", after: " + burnTimeRemainingAfter)
