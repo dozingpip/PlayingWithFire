@@ -55,30 +55,40 @@ ServerEvents.recipes(event => {
     // event.custom(falling("botania:pure_daisy", "turtle_egg", "moss_block"))
     // event.custom(falling("botania:pure_daisy", "cake", "moss_block"))
     // event.custom(fallingOn(falling("botania:pure_daisy", "flower_pot", "moss_block"), "pointed_dripstone"))
-    event.custom(falling("create:zinc_block", "kubejs:potted_twisting_vines")).id("playingwithfire:falling/zinc_block")
-    event.custom(falling("minecraft:copper_block", "minecraft:potted_crimson_fungus")).id("playingwithfire:falling/copper_block")
+    // event.custom(falling("create:zinc_block", "kubejs:potted_twisting_vines")).id("playingwithfire:falling/zinc_block")
+    event.custom({
+        "type": "lychee:block_crushing",
+        "landing_block": "botania:orange_petal_block",
+        "post": [{"type": "place", "block": "minecraft:raw_copper_block"}]
+    }).id("playingwithfire:falling/raw_copper_block")
+    event.custom({
+        "type": "lychee:block_crushing",
+        "landing_block": "minecraft:brown_mushroom_block",
+        "post": [{"type": "place", "block": "minecraft:raw_iron_block"}]
+    }).id("playingwithfire:falling/raw_iron_block")
+    event.custom({
+        "type": "lychee:block_crushing",
+        "landing_block": "minecraft:shroomlight",
+        "post": [{"type": "place", "block": "minecraft:raw_gold_block"}]
+    }).id("playingwithfire:falling/raw_gold_block")
+    event.custom({
+        "type": "lychee:block_crushing",
+        "landing_block": "botania:light_gray_petal_block",
+        "post": [{"type": "place", "block": "create:raw_zinc_block"}]
+    }).id("playingwithfire:falling/raw_zinc_block")
     event.custom(
     {
         "type": "lychee:block_crushing",
-        "item_in": [
-        {
-            "item": "gold_block"
-        },
-        ],
+        "item_in": [{"item": "gold_block"}],
         "landing_block": "netherrack",
-        "post": [
-            {
-                "type": "place",
-                "block": "nether_gold_ore"
-            }
-        ]
+        "post": [{"type": "place","block": "nether_gold_ore"}]
     }).id("playingwithfire:falling/nether_gold_ore")
     event.custom(
         {
             "type": "lychee:block_crushing",
             "item_in": [
             {
-                "item": "gold_block"
+                "item": "gold_ingot"
             },
             ],
             "landing_block": "blackstone",
@@ -117,23 +127,6 @@ ServerEvents.recipes(event => {
             }
         ]
     }).id("playingwithfire:falling/pure_daisy")
-    event.custom(
-    {
-        "type": "lychee:block_crushing",
-        "falling_block": "gravel",
-        "landing_block": "minecraft:clay",
-        "item_in": [
-        {
-            "item": "minecraft:big_dripleaf"
-        }
-        ],
-        "post": [
-            {
-                "type": "place",
-                "block": "minecraft:pointed_dripstone"
-            }
-        ]
-    }).id("playingwithfire:falling/dripleaf_to_dripstone")
     event.custom(
     {
         "type": "lychee:block_crushing",
