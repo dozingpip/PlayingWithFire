@@ -1,3 +1,8 @@
+StartupEvents.registry('item', e => {
+    e.create('minecraft:potted_crimson_fungus')
+    .parentModel("minecraft:block/potted_crimson_fungus")
+})
+
 StartupEvents.registry('block', e => {
     e.create('potted_sugar_cane')
     .tagBlock('minecraft:flower_pots').model('playingwithfire:flowerpots/potted_sugar_cane')
