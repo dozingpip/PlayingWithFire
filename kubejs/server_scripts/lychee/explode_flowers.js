@@ -1,3 +1,4 @@
+// priority:2
 const colors = DyeColor.values();
 ServerEvents.recipes(event => {
     for(var colorId in colors)

@@ -8,7 +8,7 @@
             "type": "entity",
             "entity": "minecraft:witch",
             "offset": 0.3,
-            "text": "You can craft witch eggs in a Create mixer, and witches drop redstone at an increased rate!"
+            "text": "You can craft witch eggs in a Runic Altar!"
         }
     ]
 }

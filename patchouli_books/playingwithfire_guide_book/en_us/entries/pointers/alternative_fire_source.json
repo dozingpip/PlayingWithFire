@@ -11,6 +11,11 @@
         {
             "type": "text",
             "text": "If it's just heated, it will only go up to 4 blocks, and it will go up to 8 when superheated. Keep in mind it does use more of the burner's fuel to light fires this way.<br>This can be used to your advantage for spawning other mobs :)<br>$(o)Note: This is not vanilla Create, it's just a tweak in the pack$()"
+        },
+        {
+            "type": "spotlight",
+            "item": "minecraft:blaze_powder",
+            "text": "You can also toss blaze powder into an existing fire and it will spread to the surrounding blocks."
         }
     ]
 }

@@ -6,7 +6,7 @@
         {
             "type": "spotlight",
             "item" : "create:shadow_steel_casing",
-            "text": "Shadow steel casing and elementium blocks have the same blast resistance as obsidian, so you can make farms with automated tnt using those blocks without any fear."
+            "text": "Shadow steel casing, elementium blocks, and crying obsidian have the same blast resistance as obsidian, so you can make farms with automated tnt using those blocks without any fear."
         }
     ]
 }

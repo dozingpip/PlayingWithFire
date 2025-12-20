@@ -1,4 +1,4 @@
-
+// priority: 98
 global.addFluidToTank = (fluid, amount, level, x, y, z) =>
 {
     var tanksNearby = global.blockMatchesInArea("create:fluid_tank", level, Math.floor(x), Math.floor(y), Math.floor(z), 2, 2, 2)

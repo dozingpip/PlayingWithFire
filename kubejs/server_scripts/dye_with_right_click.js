@@ -1,3 +1,4 @@
+// priority:99
 // by Rad @ https://discord.com/channels/303440391124942858/1302254208724107324/1302254208724107324
 const DyeColor = Java.loadClass('net.minecraft.world.item.DyeColor');
 const DustParticleOptions = Java.loadClass('net.minecraft.core.particles.DustParticleOptions');
