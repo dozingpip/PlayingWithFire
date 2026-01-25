@@ -128,8 +128,8 @@ BlockEvents.rightClicked(event => {
     {
         let newfacing = event.getFacing().opposite
         let burned = global.burn(block)
-        global.print(newfacing)
-        global.print(block.getEntityData().get("burnDirection"))
+        // global.print(newfacing)
+        // global.print(block.getEntityData().get("burnDirection"))
         if (burned)
         {
             player.swing()
