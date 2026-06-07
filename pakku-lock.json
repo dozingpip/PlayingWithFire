@@ -460,6 +460,42 @@
             ]
         },
         {
+            "pakku_id": "CJvPD0vKASjQqdQA",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "custommachinery-fork"
+            },
+            "name": {
+                "curseforge": "CustomMachinery (Fork)"
+            },
+            "id": {
+                "curseforge": "1058446"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "CustomMachinery-forge-1.20.1-0.10.8.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7498/883/CustomMachinery-forge-1.20.1-0.10.8.jar",
+                    "id": "7498883",
+                    "parent_id": "1058446",
+                    "hashes": {
+                        "sha1": "3aa0f44bac9c082005a79e5d849e2053415da544",
+                        "md5": "890d8d6d03980ace31adbe5c4e9bdbbc"
+                    },
+                    "required_dependencies": [],
+                    "size": 1733869,
+                    "date_published": "2026-01-21T05:31:36.947Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "y60MXSNUuOXmppzm",
             "type": "MOD",
             "side": "CLIENT",
@@ -584,6 +620,9 @@
         },
         {
             "pakku_id": "ZcaKt39aQnwpq5VX",
+            "pakku_links": [
+                "DSVkhcJjR3TPre9z"
+            ],
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -777,19 +816,43 @@
             ]
         },
         {
-            "pakku_id": "dcMamTszdYPmm5zG",
+            "pakku_id": "DSVkhcJjR3TPre9z",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
+                "curseforge": "geckolib",
                 "modrinth": "geckolib"
             },
             "name": {
+                "curseforge": "GeckoLib",
                 "modrinth": "Geckolib"
             },
             "id": {
+                "curseforge": "388172",
                 "modrinth": "8BmcQJ2H"
             },
             "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "geckolib-forge-1.20.1-4.8.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7553/267/geckolib-forge-1.20.1-4.8.3.jar",
+                    "id": "7553267",
+                    "parent_id": "388172",
+                    "hashes": {
+                        "sha1": "5428765c6c2e2135da6ee01f2f0478fa0db6aee7",
+                        "md5": "33b0f8fe0a8d59fcf9d4e222741ecba7"
+                    },
+                    "required_dependencies": [],
+                    "size": 1039046,
+                    "date_published": "2026-01-31T01:40:51.330Z"
+                },
                 {
                     "type": "modrinth",
                     "file_name": "geckolib-forge-1.20.1-4.8.3.jar",
@@ -1518,6 +1581,9 @@
         },
         {
             "pakku_id": "ZteDMxHj2B5sAgjF",
+            "pakku_links": [
+                "DSVkhcJjR3TPre9z"
+            ],
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -1836,17 +1902,20 @@
             ]
         },
         {
-            "pakku_id": "6zMHsoEL8iC8JPY4",
+            "pakku_id": "i5tZsKk0pjLB7HBe",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
-                "modrinth": "storagedrawers"
+                "modrinth": "storagedrawers",
+                "curseforge": "storage-drawers"
             },
             "name": {
-                "modrinth": "Storage Drawers"
+                "modrinth": "Storage Drawers",
+                "curseforge": "Storage Drawers"
             },
             "id": {
-                "modrinth": "guitPqEi"
+                "modrinth": "guitPqEi",
+                "curseforge": "223852"
             },
             "files": [
                 {
@@ -1870,6 +1939,28 @@
                     "required_dependencies": [],
                     "size": 1143622,
                     "date_published": "2025-09-14T00:32:12.672199Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "StorageDrawers-forge-1.20.1-12.14.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6994/481/StorageDrawers-forge-1.20.1-12.14.3.jar",
+                    "id": "6994481",
+                    "parent_id": "223852",
+                    "hashes": {
+                        "sha1": "afca74c6e18883632e74e15a549004bfca245a90",
+                        "md5": "b028423a78cf22d461e00ac681b59eb2"
+                    },
+                    "required_dependencies": [],
+                    "size": 1143623,
+                    "date_published": "2025-09-14T00:31:55.107Z"
                 }
             ]
         }
